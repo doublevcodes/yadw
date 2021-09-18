@@ -1,0 +1,35 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    env:
+      PIP_USER: 1
+      POETRY_VIRTUALENVS_CREATE: false
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install poetry
+        run: |
+          pip install poetry
+          poetry install
+
+      - name: Lint with black
+        run: black . --check --diff
+
+      - name: Lint with isort
+        run: isort . --check --diff

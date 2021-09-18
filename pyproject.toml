@@ -17,6 +17,9 @@ isort = "~=5.9"
 pytest = "~=6.2"
 taskipy = "~=1.8"
 
+[tool.isort]
+profile = "black"
+
 [tool.taskipy.tasks]
 lint = "pre-commit run --all-files"
 precommit = "pre-commit install"
