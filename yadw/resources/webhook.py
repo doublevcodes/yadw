@@ -24,6 +24,6 @@ class Webhook(BaseModel):
 
 
 class WebhookTypes(IntEnum):
-    INCOMING: 1
-    CHANNEL_FOLLOWER: 2
-    APPLICATION: 3
+    INCOMING = 1
+    CHANNEL_FOLLOWER = 2
+    APPLICATION = 3
