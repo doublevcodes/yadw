@@ -1,0 +1,8 @@
+# <type>[optional scope]: <description>
+#
+# [optional body]
+#
+# [optional footer(s)]
+#
+# list of possible <types>: 'build', 'chore', 'ci', 'docs', 'feat',
+#    'fix', 'perf', 'refactor', 'revert', 'style', 'test'
