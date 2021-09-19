@@ -2,6 +2,7 @@ from typing import Optional
 
 from pydantic import BaseModel
 
+from .user import User
 
 __all__ = ("Channel",)
 
@@ -19,7 +20,7 @@ class Channel(BaseModel):
     bitrate: Optional[int]
     user_limit: Optional[int]
     rate_limit_per_user: Optional[int]
-    recipients: Optional[list]
+    recipients: Optional[list[User]]
     icon: Optional[str]
     owner_id: Optional[int]
     application_id: Optional[int]
