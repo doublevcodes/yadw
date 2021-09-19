@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import Optional
 
 from pydantic import BaseModel
@@ -21,3 +22,15 @@ class Invite(BaseModel):
     approximate_member_count: Optional[int]
     expires_at: Optional[str]
     stage_instance: Optional[StageInstance]
+
+
+class InviteTarget(IntEnum):
+    pass
+
+
+class InviteMetaData(BaseModel):
+    pass
+
+
+class InviteStageInstance(BaseModel):
+    pass
