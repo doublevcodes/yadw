@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "yadw"
+version = "0.1.0"
+description = "Yet Another Discord Wrapper"
+authors = ["Vivaan Verma <54081925+doublevcodes@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~=3.9"
+orjson = "~=3.6"
+pydantic = "~=1.8"
+pre-commit = "^2.15.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.9b0"
+isort = "~=5.9"
+pytest = "~=6.2"
+taskipy = "~=1.8"
+
+[tool.isort]
+profile = "black"
+
+[tool.taskipy.tasks]
+lint = "pre-commit run --all-files"
+precommit = "pre-commit install"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
