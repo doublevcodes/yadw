@@ -13,5 +13,5 @@ class StageInstance(BaseModel):
 
 
 class PrivacyLevel(IntEnum):
-    PUBLIC: 1
-    GUILD_ONLY: 2
+    PUBLIC = 1
+    GUILD_ONLY = 2
